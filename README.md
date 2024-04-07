@@ -73,27 +73,35 @@ mkdir C:\Users\work\app\python\python-3810\source\origin
 
 * windows
 
-`mkdir C:\Users\work\app\python\python-3810\windows\branch`
+```
+mkdir C:\Users\work\app\python\python-3810\windows\branch
+```
 
 * macOS
 
-`mkdir C:\Users\work\app\python\python-3810\mac\branch`
+```
+mkdir C:\Users\work\app\python\python-3810\mac\branch
+```
 
 * Source（ソース）
 
-`mkdir C:\Users\work\app\python\python-3810\source\branch`
+```
+mkdir C:\Users\work\app\python\python-3810\source\branch
+```
 
 ### インストールしたpythonを格納
 
 今回はWindows版
 
-インストールしたpython-3.8.10-embed-amd64.zipをオリジナルの格納先に格納、
+インストールしたpython-3.8.10-embed-amd64.zipをオリジナルの格納先に格納
 
 展開もしておく
 
 ```
+・zip格納
 C:\Users\work\app\python\python-3810\windows\origin\python-3.8.10-embed-amd64.zip
 
+・展開ファイル格納
 C:\Users\work\app\python\python-3810\windows\origin\python-3.8.10-embed-amd64
 ```
 
