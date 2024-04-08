@@ -442,11 +442,19 @@ mkdir C:\Users\work\project-app
 
 * 作成
 
-  `{python.exe} -m virtualenv {仮想環境配置場所}`
+  `{もととなるpythonのスタンドアローンのpython.exe} -m virtualenv {仮想環境配置場所}`
 
   ```
   C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject1"
   ```
+
+
+※本レポジトリのapp/pythonをダウンロードした場合は以下のコマンドで実施。後の説明は読み替えてください。
+  ```
+  {ダウンロードして配置した場所}\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject1"
+  ```
+
+  
 * ログ
 
   ```
