@@ -8,7 +8,8 @@
 
 OSビルド22631.3296
 
-##   構築済みモデル
+## 構築済みモデル
+
 app/pythonフォルダーに格納済み（本資料の項目１～２で作成するもの）
 上記をダウンロードして、項目３から実施でも可
 
@@ -440,261 +441,46 @@ mkdir C:\Users\work\project-app
 
 #### 仮想環境1作成（virtualProject1）
 
-* 作成
+* プロジェクト作成（project_v1）
+
+```
+mkdir C:\Users\work\project-app\project_v1
+```
+
+* 仮想開発環境作成（virtualProject1）
 
   `{もととなるpythonのスタンドアローンのpython.exe} -m virtualenv {仮想環境配置場所}`
 
   ```
-  C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject1"
-  ```
+  C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\project_v1\virtualProject1"
 
+  ```
 
 ※本レポジトリのapp/pythonをダウンロードした場合は以下のコマンドで実施。後の説明は読み替えてください。
-  ```
-  {ダウンロードして配置した場所}\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject1"
-  ```
 
-  
+```
+  {ダウンロードして配置した場所}\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\project_v1\virtualProject1"
+```
+
 * ログ
 
   ```
-  C:\Users\work\project-app>C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject1"
-  created virtual environment CPython3.8.10.final.0-64 in 213ms
-    creator CPython3Windows(dest=C:\Users\work\project-app\virtualProject1, clear=False, no_vcs_ignore=False, global=False)
+  C:\Users\work\project-app\project_v1>C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\project_v1\virtualProject1"
+  created virtual environment CPython3.8.10.final.0-64 in 2582ms
+    creator CPython3Windows(dest=C:\Users\work\project-app\project_v1\virtualProject1, clear=False, no_vcs_ignore=False, global=False)
     seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\work\AppData\Local\pypa\virtualenv)
-      added seed packages: pip==24.0, setuptools==69.1.1, wheel==0.42.0
+      added seed packages: pip==24.0, setuptools==69.1.1, wheel==0.43.0
     activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
   ```
 
 virtualProject1が作成される
 
 ```
-C:\Users\work\project-app>cd virtualProject1
-
-C:\Users\work\project-app\virtualProject1>tree ./
+C:\Users\work\project-app\project_v1>cd virtualProject1
+C:\Users\work\project-app\project_v1\virtualProject1>tree ./ 
 フォルダー パスの一覧
 ボリューム シリアル番号は A4E1-12C1 です
-C:\USERS\WORK\PROJECT-APP\VIRTUALPROJECT1
-├─Lib
-│  └─site-packages
-│      ├─pip
-│      │  ├─_internal
-│      │  │  ├─cli
-│      │  │  │  └─__pycache__
-│      │  │  ├─commands
-│      │  │  │  └─__pycache__
-│      │  │  ├─distributions
-│      │  │  │  └─__pycache__
-│      │  │  ├─index
-│      │  │  │  └─__pycache__
-│      │  │  ├─locations
-│      │  │  │  └─__pycache__
-│      │  │  ├─metadata
-│      │  │  │  ├─importlib
-│      │  │  │  └─__pycache__
-│      │  │  ├─models
-│      │  │  │  └─__pycache__
-│      │  │  ├─network
-│      │  │  │  └─__pycache__
-│      │  │  ├─operations
-│      │  │  │  ├─build
-│      │  │  │  │  └─__pycache__
-│      │  │  │  ├─install
-│      │  │  │  │  └─__pycache__
-│      │  │  │  └─__pycache__
-│      │  │  ├─req
-│      │  │  │  └─__pycache__
-│      │  │  ├─resolution
-│      │  │  │  ├─legacy
-│      │  │  │  ├─resolvelib
-│      │  │  │  └─__pycache__
-│      │  │  ├─utils
-│      │  │  │  └─__pycache__
-│      │  │  ├─vcs
-│      │  │  │  └─__pycache__
-│      │  │  └─__pycache__
-│      │  ├─_vendor
-│      │  │  ├─cachecontrol
-│      │  │  │  ├─caches
-│      │  │  │  │  └─__pycache__
-│      │  │  │  └─__pycache__
-│      │  │  ├─certifi
-│      │  │  │  └─__pycache__
-│      │  │  ├─chardet
-│      │  │  │  ├─cli
-│      │  │  │  ├─metadata
-│      │  │  │  └─__pycache__
-│      │  │  ├─colorama
-│      │  │  │  └─tests
-│      │  │  ├─distlib
-│      │  │  │  └─__pycache__
-│      │  │  ├─distro
-│      │  │  ├─idna
-│      │  │  │  └─__pycache__
-│      │  │  ├─msgpack
-│      │  │  │  └─__pycache__
-│      │  │  ├─packaging
-│      │  │  │  └─__pycache__
-│      │  │  ├─pkg_resources
-│      │  │  │  └─__pycache__
-│      │  │  ├─platformdirs
-│      │  │  │  └─__pycache__
-│      │  │  ├─pygments
-│      │  │  │  ├─filters
-│      │  │  │  │  └─__pycache__
-│      │  │  │  ├─formatters
-│      │  │  │  ├─lexers
-│      │  │  │  │  └─__pycache__
-│      │  │  │  ├─styles
-│      │  │  │  │  └─__pycache__
-│      │  │  │  └─__pycache__
-│      │  │  ├─pyparsing
-│      │  │  │  ├─diagram
-│      │  │  │  └─__pycache__
-│      │  │  ├─pyproject_hooks
-│      │  │  │  ├─_in_process
-│      │  │  │  │  └─__pycache__
-│      │  │  │  └─__pycache__
-│      │  │  ├─requests
-│      │  │  │  └─__pycache__
-│      │  │  ├─resolvelib
-│      │  │  │  └─compat
-│      │  │  ├─rich
-│      │  │  │  └─__pycache__
-│      │  │  ├─tenacity
-│      │  │  │  └─__pycache__
-│      │  │  ├─tomli
-│      │  │  │  └─__pycache__
-│      │  │  ├─truststore
-│      │  │  ├─urllib3
-│      │  │  │  ├─contrib
-│      │  │  │  │  ├─_securetransport
-│      │  │  │  │  └─__pycache__
-│      │  │  │  ├─packages
-│      │  │  │  │  ├─backports
-│      │  │  │  │  └─__pycache__
-│      │  │  │  ├─util
-│      │  │  │  │  └─__pycache__
-│      │  │  │  └─__pycache__
-│      │  │  ├─webencodings
-│      │  │  └─__pycache__
-│      │  └─__pycache__
-│      ├─pip-24.0.dist-info
-│      ├─pkg_resources
-│      │  ├─extern
-│      │  └─_vendor
-│      │      ├─importlib_resources
-│      │      ├─jaraco
-│      │      │  └─text
-│      │      ├─more_itertools
-│      │      ├─packaging
-│      │      └─platformdirs
-│      ├─setuptools
-│      │  ├─command
-│      │  ├─compat
-│      │  ├─config
-│      │  │  └─_validate_pyproject
-│      │  ├─extern
-│      │  ├─_distutils
-│      │  │  └─command
-│      │  └─_vendor
-│      │      ├─importlib_metadata
-│      │      ├─importlib_resources
-│      │      ├─jaraco
-│      │      │  └─text
-│      │      ├─more_itertools
-│      │      ├─packaging
-│      │      └─tomli
-│      ├─setuptools-69.1.1.dist-info
-│      ├─wheel
-│      │  ├─cli
-│      │  └─vendored
-│      │      └─packaging
-│      ├─wheel-0.42.0.dist-info
-│      ├─_distutils_hack
-│      │  └─__pycache__
-│      └─__pycache__
-└─Scripts
-```
-
-* 実行確認
-
-  ```
-  C:\Users\work\project-app\virtualProject1\Scripts\python.exe
-  ```
-* ログ（コントロールZで抜ける）
-
-  ```
-  C:\Users\work\project-app\virtualProject1>C:\Users\work\project-app\virtualProject1\Scripts\python.exe
-  Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)] on win32
-  Type "help", "copyright", "credits" or "license" for more information.
-  >>>
-  >>>
-  ```
-* ピップバージョン確認
-
-```
-C:\Users\work\project-app\virtualProject1\Scripts\pip3.exe -V
-```
-
-* ログ
-
-```
-C:\Users\work\project-app\virtualProject1>C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe -V
-pip 24.0 from C:\Users\work\project-app\virtualProject1\lib\site-packages\pip (python 3.8)
-```
-
-* ピップリスト確認
-
-  ```
-  C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe list
-  ```
-* ログ
-
-```
-C:\Users\work\project-app\virtualProject1>C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe list
-Package    Version
----------- -------
-pip        24.0
-setuptools 69.1.1
-wheel      0.42.0
-```
-
-作成されたことが確認できた
-
-#### 仮想環境2作成（virtualProject2）
-
-仮想環境1と同様に作成
-
-* 作成
-
-  `{python.exe} -m virtualenv {仮想環境配置場所}`
-
-  ```
-  C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject2"
-  ```
-* ログ
-
-  ```
-  C:\Users\work\project-app>C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\virtualProject2"
-  created virtual environment CPython3.8.10.final.0-64 in 210ms
-    creator CPython3Windows(dest=C:\Users\work\project-app\virtualProject2, clear=False, no_vcs_ignore=False, global=False)
-    seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\work\AppData\Local\pypa\virtualenv)
-      added seed packages: pip==24.0, setuptools==69.1.1, wheel==0.42.0
-    activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
-  ```
-
-virtualProject2が作成される
-
-```
-C:\Users\work\project-app>cd virtualProject2
-
-C:\Users\work\project-app\virtualProject2>
-
-C:\Users\work\project-app\virtualProject2>tree ./
-フォルダー パスの一覧
-ボリューム シリアル番号は A4E1-12C1 です
-C:\USERS\WORK\PROJECT-APP\VIRTUALPROJECT2
+C:\USERS\WORK\PROJECT-APP\PROJECT_V1\VIRTUALPROJECT1
 ├─Lib
 │  └─site-packages
 │      ├─pip
@@ -787,7 +573,7 @@ C:\USERS\WORK\PROJECT-APP\VIRTUALPROJECT2
 │      │  ├─cli
 │      │  └─vendored
 │      │      └─packaging
-│      ├─wheel-0.42.0.dist-info
+│      ├─wheel-0.43.0.dist-info
 │      └─_distutils_hack
 └─Scripts
 ```
@@ -795,44 +581,231 @@ C:\USERS\WORK\PROJECT-APP\VIRTUALPROJECT2
 * 実行確認
 
   ```
-  C:\Users\work\project-app\virtualProject2\Scripts\python.exe
+  C:\Users\work\project-app\project_v1\virtualProject1\Scripts\python.exe
   ```
 * ログ（コントロールZで抜ける）
 
   ```
-  C:\Users\work\project-app\virtualProject2>C:\Users\work\project-app\virtualProject2\Scripts\python.exe
+  C:\Users\work\project-app\project_v1\virtualProject1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\python.exe
   Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)] on win32
   Type "help", "copyright", "credits" or "license" for more information.
   >>>
-  >>>
+  >>> ^Z
   ```
 * ピップバージョン確認
 
 ```
-C:\Users\work\project-app\virtualProject2\Scripts\pip3.exe -V
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe -V
 ```
 
 * ログ
 
 ```
-C:\Users\work\project-app\virtualProject2>C:\Users\work\project-app\virtualProject2\Scripts\pip3.8.exe -V
-pip 24.0 from C:\Users\work\project-app\virtualProject2\lib\site-packages\pip (python 3.8)
+C:\Users\work\project-app\project_v1\virtualProject1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe -V
+pip 24.0 from C:\Users\work\project-app\project_v1\virtualProject1\lib\site-packages\pip (python 3.8)
 ```
 
 * ピップリスト確認
 
   ```
-  C:\Users\work\project-app\virtualProject2\Scripts\pip3.8.exe list
+  C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe list
   ```
 * ログ
 
 ```
-C:\Users\work\project-app\virtualProject2>C:\Users\work\project-app\virtualProject2\Scripts\pip3.8.exe list
+C:\Users\work\project-app\project_v1\virtualProject1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe list
 Package    Version
 ---------- -------
 pip        24.0
 setuptools 69.1.1
-wheel      0.42.0
+wheel      0.43.0
+```
+
+作成されたことが確認できた
+
+#### 仮想環境2作成（virtualProject2）
+
+仮想環境1と同様に作成
+
+* プロジェクト作成（project_v2）
+
+```
+mkdir C:\Users\work\project-app\project_v2
+```
+
+* 仮想開発環境作成（virtualProject2）
+
+  `{もととなるpythonのスタンドアローンのpython.exe} -m virtualenv {仮想環境配置場所}`
+
+  ```
+  C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\project_v2\virtualProject2"
+
+  ```
+
+※本レポジトリのapp/pythonをダウンロードした場合は以下のコマンドで実施。後の説明は読み替えてください。
+
+```
+  {ダウンロードして配置した場所}\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\project_v2\virtualProject2"
+```
+
+* ログ
+
+  ```
+  C:\Users\work\project-app\project_v2>C:\Users\work\app\python\python-3810\windows\branch\python-3810-virtualenv\python.exe -m virtualenv "C:\Users\work\project-app\project_v2\virtualProject2"
+  created virtual environment CPython3.8.10.final.0-64 in 237ms
+    creator CPython3Windows(dest=C:\Users\work\project-app\project_v2\virtualProject2, clear=False, no_vcs_ignore=False, global=False)
+    seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\work\AppData\Local\pypa\virtualenv)
+      added seed packages: pip==24.0, setuptools==69.1.1, wheel==0.43.0
+    activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+  ```
+
+virtualProject2が作成される
+
+```
+C:\Users\work\project-app\project_v2>cd virtualProject2
+C:\Users\work\project-app\project_v2\virtualProject2>tree ./
+フォルダー パスの一覧
+ボリューム シリアル番号は A4E1-12C1 です
+C:\USERS\WORK\PROJECT-APP\PROJECT_V2\VIRTUALPROJECT2
+├─Lib
+│  └─site-packages
+│      ├─pip
+│      │  ├─_internal
+│      │  │  ├─cli
+│      │  │  ├─commands
+│      │  │  ├─distributions
+│      │  │  ├─index
+│      │  │  ├─locations
+│      │  │  ├─metadata
+│      │  │  │  └─importlib
+│      │  │  ├─models
+│      │  │  ├─network
+│      │  │  ├─operations
+│      │  │  │  ├─build
+│      │  │  │  └─install
+│      │  │  ├─req
+│      │  │  ├─resolution
+│      │  │  │  ├─legacy
+│      │  │  │  └─resolvelib
+│      │  │  ├─utils
+│      │  │  └─vcs
+│      │  └─_vendor
+│      │      ├─cachecontrol
+│      │      │  └─caches
+│      │      ├─certifi
+│      │      ├─chardet
+│      │      │  ├─cli
+│      │      │  └─metadata
+│      │      ├─colorama
+│      │      │  └─tests
+│      │      ├─distlib
+│      │      ├─distro
+│      │      ├─idna
+│      │      ├─msgpack
+│      │      ├─packaging
+│      │      ├─pkg_resources
+│      │      ├─platformdirs
+│      │      ├─pygments
+│      │      │  ├─filters
+│      │      │  ├─formatters
+│      │      │  ├─lexers
+│      │      │  └─styles
+│      │      ├─pyparsing
+│      │      │  └─diagram
+│      │      ├─pyproject_hooks
+│      │      │  └─_in_process
+│      │      ├─requests
+│      │      ├─resolvelib
+│      │      │  └─compat
+│      │      ├─rich
+│      │      ├─tenacity
+│      │      ├─tomli
+│      │      ├─truststore
+│      │      ├─urllib3
+│      │      │  ├─contrib
+│      │      │  │  └─_securetransport
+│      │      │  ├─packages
+│      │      │  │  └─backports
+│      │      │  └─util
+│      │      └─webencodings
+│      ├─pip-24.0.dist-info
+│      ├─pkg_resources
+│      │  ├─extern
+│      │  └─_vendor
+│      │      ├─importlib_resources
+│      │      ├─jaraco
+│      │      │  └─text
+│      │      ├─more_itertools
+│      │      ├─packaging
+│      │      └─platformdirs
+│      ├─setuptools
+│      │  ├─command
+│      │  ├─compat
+│      │  ├─config
+│      │  │  └─_validate_pyproject
+│      │  ├─extern
+│      │  ├─_distutils
+│      │  │  └─command
+│      │  └─_vendor
+│      │      ├─importlib_metadata
+│      │      ├─importlib_resources
+│      │      ├─jaraco
+│      │      │  └─text
+│      │      ├─more_itertools
+│      │      ├─packaging
+│      │      └─tomli
+│      ├─setuptools-69.1.1.dist-info
+│      ├─wheel
+│      │  ├─cli
+│      │  └─vendored
+│      │      └─packaging
+│      ├─wheel-0.43.0.dist-info
+│      └─_distutils_hack
+└─Scripts
+```
+
+* 実行確認
+
+  ```
+  C:\Users\work\project-app\project_v2\virtualProject2\Scripts\python.exe
+  ```
+* ログ（コントロールZで抜ける）
+
+  ```
+  C:\Users\work\project-app\project_v2\virtualProject2>C:\Users\work\project-app\project_v2\virtualProject2\Scripts\python.exe
+  Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)] on win32
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>>
+  >>>
+  >>> ^Z
+  ```
+* ピップバージョン確認
+
+```
+C:\Users\work\project-app\project_v2\virtualProject2\Scripts\pip3.8.exe -V
+```
+
+* ログ
+
+```
+C:\Users\work\project-app\project_v2\virtualProject2>C:\Users\work\project-app\project_v2\virtualProject2\Scripts\pip3.8.exe -V
+pip 24.0 from C:\Users\work\project-app\project_v2\virtualProject2\lib\site-packages\pip (python 3.8)
+```
+
+* ピップリスト確認
+
+  ```
+  C:\Users\work\project-app\project_v2\virtualProject2\Scripts\pip3.8.exe list
+  ```
+* ログ
+
+```
+C:\Users\work\project-app\project_v2\virtualProject2>C:\Users\work\project-app\project_v2\virtualProject2\Scripts\pip3.8.exe list
+Package    Version
+---------- -------
+pip        24.0
+setuptools 69.1.1
+wheel      0.43.0
 ```
 
 作成されたことが確認できた
@@ -846,29 +819,32 @@ wheel      0.42.0
 * ターミナルで実行
 
 ```
-C:\Users\work\project-app\virtualProject1\Scripts\activate
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\activate
 ```
 
 * ログ
 
 ```
-C:\Users\work>C:\Users\work\project-app\virtualProject1\Scripts\activate
 
-(virtualProject1) C:\Users\work>
-(virtualProject1) C:\Users\work>
+C:\Users\work\project-app>cd project_v1
+
+C:\Users\work\project-app\project_v1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\activate
+
+(virtualProject1) C:\Users\work\project-app\project_v1>
+(virtualProject1) C:\Users\work\project-app\project_v1>
+
 ```
 
-(virtualProject1) C:\Users\work>　のように仮想環境が起動する
+(virtualProject1) C:\Users\work\project-app\project_v1>　のように仮想環境が起動する
 
 作業が終了したら、仮想環境をディアクティベートで抜ける
 
 ```
-C:\Users\work>C:\Users\work\project-app\virtualProject1\Scripts\activate
 
-(virtualProject1) C:\Users\work>
-(virtualProject1) C:\Users\work>
-(virtualProject1) C:\Users\work>deactivate
-C:\Users\work>
+(virtualProject1) C:\Users\work\project-app\project_v1>
+(virtualProject1) C:\Users\work\project-app\project_v1>
+(virtualProject1) C:\Users\work\project-app\project_v1>deactivate
+
 ```
 
 ### 仮想環境１にパッケージをインストール
@@ -876,53 +852,67 @@ C:\Users\work>
 * ターミナル（cmd等）で確認
 
   ```
-  C:\Users\work\project-app\virtualProject1\Scripts\pip.exe list
+  C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe list
 
   ```
 * ログ
 
   ```
-  C:\Users\work>C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe list
+
+  C:\Users\work\project-app\project_v1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe list  
   Package    Version
   ---------- -------
   pip        24.0
   setuptools 69.1.1
-  wheel      0.42.0
+  wheel      0.43.0
   ```
 * 適当なパッケージをインストール（tqdm）
 
+  ```
+  C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe install tqdm
+  ```
+* ログ
+
 ```
-C:\Users\work>C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe install tqdm
+C:\Users\work\project-app\project_v1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe install tqdm
 Collecting tqdm
-  Downloading tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.6/57.6 kB ? eta 0:00:00
+  Using cached tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
 Collecting colorama (from tqdm)
-  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
-Downloading tqdm-4.66.2-py3-none-any.whl (78 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB ? eta 0:00:00
-Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Using cached tqdm-4.66.2-py3-none-any.whl (78 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
 Installing collected packages: colorama, tqdm
 Successfully installed colorama-0.4.6 tqdm-4.66.2
 
-C:\Users\work>
-C:\Users\work>C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe list
-Package    Version
----------- -------
-colorama   0.4.6
-pip        24.0
-setuptools 69.1.1
-tqdm       4.66.2
-wheel      0.42.0
+
 ```
 
+* リストを確認
+
+```
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe list
+```
+
+* ログ
+
+  ```
+  C:\Users\work\project-app\project_v1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe list
+  Package    Version
+  ---------- -------
+  colorama   0.4.6
+  pip        24.0
+  setuptools 69.1.1
+  tqdm       4.66.2
+  wheel      0.43.0
+  ```
 * コマンドでインストールされているものを確認
 
 ```
-C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe freeze
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe freeze
 ```
 
 ```
-C:\Users\work>C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe freeze
+C:\Users\work\project-app\project_v1>C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe freeze
 colorama==0.4.6
 tqdm==4.66.2
 ```
@@ -932,19 +922,16 @@ tqdmとcoloramaがインストールされていた
 ### 仮想環境２でパッケージのインストール状況を確認
 
 ```
-C:\Users\work>C:\Users\work\project-app\virtualProject2\Scripts\pip3.8.exe list
+C:\Users\work\project-app\project_v2\virtualProject2\Scripts\pip3.8.exe list
+```
+
+```
+C:\Users\work\project-app\project_v1>C:\Users\work\project-app\project_v2\virtualProject2\Scripts\pip3.8.exe list
 Package    Version
 ---------- -------
 pip        24.0
 setuptools 69.1.1
-wheel      0.42.0
-```
-
-```
-C:\Users\work>C:\Users\work\project-app\virtualProject2\Scripts\pip3.8.exe freeze
-
-C:\Users\work>
-
+wheel      0.43.0
 ```
 
 tqdmとcoloramaはインストールされていないことから、環境は分かれていることが確認できた。
@@ -956,17 +943,18 @@ python実行時のコマンドが長すぎて使いにくいので、パスを�
 * pythonコマンド
 * pipコマンド
 
-### 仮想環境１を使用する場合（仮想環境２で開発する際は切り替える）
+### 仮想環境１を使用する場合
 
 **（仮想環境２で開発する際は、切替る。切り替えないと、仮想環境１にパッケージがインストールされてしまうことが発生する）**
-
 
 * ユーザ環境変数のPathに以下を追加
   ※%USERPROFILE%\AppData\Local\Microsoft\WindowsAppsより上（前）に記述
 
 ```
-C:\Users\work\project-app\virtualProject1\Scripts
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts
 ```
+
+重要：変更後、ターミナルを立ち上げなおす
 
 #### pythonコマンド確認
 
@@ -976,12 +964,12 @@ C:\Users\work\project-app\virtualProject1\Scripts
 C:\Users\work>python -V
 Python 3.8.10
 
-C:\Users\work>where python
-C:\Users\work\project-app\virtualProject1\Scripts\python.exe
+C:\Users\work\project-app\project_v1>where python
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\python.exe
 C:\Users\work\AppData\Local\Microsoft\WindowsApps\python.exe
 ```
 
-C:\Users\work\project-app\virtualProject1\Scripts\python.exeが
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\python.exeが
 
 C:\Users\work\AppData\Local\Microsoft\WindowsApps\python.exeより先に表示されていること
 
@@ -990,37 +978,101 @@ C:\Users\work\AppData\Local\Microsoft\WindowsApps\python.exeより先に表示�
 * ログ
 
 ```
-C:\Users\work>pip3.8 -V
-pip 24.0 from C:\Users\work\project-app\virtualProject1\lib\site-packages\pip (python 3.8)
+C:\Users\work\project-app\project_v1>pip3.8 -V
+pip 24.0 from C:\Users\work\project-app\project_v1\virtualProject1\lib\site-packages\pip (python 3.8)
 
-C:\Users\work>where pip3.8
-C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exe
-C:\Users\work\app\python\python3.8.10\python-3.8.10-embed-amd64\Scripts\pip3.8.exe
+
+
+C:\Users\work\project-app\project_v1>where pip3.8
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts\pip3.8.exe
 ```
-
-C:\Users\work\project-app\virtualProject1\Scripts\pip3.8.exeが
-
-C:\Users\work\app\python\python3.8.10\python-3.8.10-embed-amd64\Scripts\pip3.8.exeより先に表示されていること
-
 
 パスが通っていることを確認できた
 
-### 仮想環境１にアクティベートして入る
+## パス追加後、仮想環境１、２を立ち上げてみる
 
-* ログ
+* activateコマンドで仮想環境１を立ち上げる
 
 ```
+C:\Users\work>activate   
+
+(virtualProject1) C:\Users\work>
+(virtualProject1) C:\Users\work>
+```
+
+先ほどのパス設定が反映され、(virtualProject1)が立ち上がる
+
+* deactivateで抜ける
+
+```
+(virtualProject1) C:\Users\work>
+(virtualProject1) C:\Users\work>deactivate
+C:\Users\work>
+```
+
+* 仮想環境２を開発したいときは環境変数のパスに変更すればOK
+
+  `C:\Users\work\project-app\project_v1\virtualProject1\Scripts`を `C:\Users\work\project-app\project_v2\virtualProject2\Scripts`に変更して、
+
+  ターミナルを再立ち上げ後、確認
+
+  ```
+  C:\Users\work>activate
+
+  (virtualProject2) C:\Users\work>
+
+  ```
+
+## おすすめ）パスは設定しないで開発
+
+先ほど設定した以下のパスを消す
+
+`C:\Users\work\project-app\project_v2\virtualProject2\Scripts`
+
+以下の様にできなくなるが
+
+```
+C:\Users\work>activate
+'activate' は、内部コマンドまたは外部コマンド、
+操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+```
+
+
+
+直接、仮想環境のactivateを実行すれば、起動する
+
+```
+C:\Users\work>
 C:\Users\work>cd project-app
 
-C:\Users\work\project-app>cd virtualProject1
+C:\Users\work\project-app>cd project_v1
 
-C:\Users\work\project-app\virtualProject1>.\Scripts\activate
+C:\Users\work\project-app\project_v1>cd virtualProject1
 
-(virtualProject1) C:\Users\work\project-app\virtualProject1>
-(virtualProject1) C:\Users\work\project-app\virtualProject1>
+C:\Users\work\project-app\project_v1\virtualProject1>cd Scripts
+
+C:\Users\work\project-app\project_v1\virtualProject1\Scripts>activate
+
+(virtualProject1) C:\Users\work\project-app\project_v1\virtualProject1\Scripts>
+(virtualProject1) C:\Users\work\project-app\project_v1\virtualProject1\Scripts>
 ```
+
+
+pip使いたい場合、仮想環境１の\Scripts\配下にある、pip3.8.exeをたたけば、コマンドが使える
+
+```
+(virtualProject1) C:\Users\work\project-app\project_v1\virtualProject1\Scripts>pip3.8.exe list
+Package    Version
+---------- -------
+colorama   0.4.6
+pip        24.0
+setuptools 69.1.1
+tqdm       4.66.2
+wheel      0.43.0
+```
+
 
 
 ### １０．その他参考
 
-[Pythonではパッケージ管理ツールpipを含まない仮想環境を作ることができる。◯か☓か](https://nikkie-ftnext.hatenablog.com/entry/create-python-virtual-environments-without-pip)
+[参考](https://nikkie-ftnext.hatenablog.com/entry/create-python-virtual-environments-without-pip)
