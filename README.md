@@ -846,7 +846,7 @@ wheel      0.42.0
 * ターミナルで実行
 
 ```
-C:\Users\work\project-app\virtualProject2\Scripts\activate
+C:\Users\work\project-app\virtualProject1\Scripts\activate
 ```
 
 * ログ
