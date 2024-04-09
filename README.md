@@ -1096,6 +1096,13 @@ Set-ExecutionPolicy RemoteSigned
 これにより、スクリプトの実行が許可され、Pythonの仮想環境を作成するためのコマンドが正常に実行できるようになります。ただし、セキュリティ上の理由から、ポリシーを変更する前に注意してください。
 
 
+VScodeでの画面
+
+![代替テキスト](/picture/vscode-virtualenv-0001.png)
+
+![代替テキスト](/picture/vscode-virtualenv-0002.png)
+
+
 #### 実行ポリシーを元に戻す方法
 Set-ExecutionPolicy コマンドで変更された実行ポリシーを元に戻すには、同じコマンドを使用してデフォルトのポリシーに戻します。
 
