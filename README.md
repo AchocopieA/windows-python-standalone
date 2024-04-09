@@ -249,6 +249,14 @@ Length Name
 
   [virtualenv · PyPI](https://pypi.org/project/virtualenv/)
 
+  Pythonの venv と virtualenv の違い
+  
+  venv:
+  venv はPythonの標準ライブラリの一部であり、Python 3.3以降で提供されています1。
+  Pythonをインストールする際に同梱されており、プロジェクトを始める際に追加のインストールは不要です。
+  Python 3 で利用可能で、Python 2 では提供されていません。
+  シンプルで使いやすく、Pythonのバージョンごとに仮想環境を管理するための基本的な機能を提供します。
+  
   virtualenv:
   virtualenv はPythonの外部パッケージで、Pythonの標準ライブラリには含まれていません1。
   別途インストールが必要ですが、Python 2およびPython 3の両方で使用できます。
